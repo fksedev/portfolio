@@ -1,0 +1,8 @@
+# Local Chrome debug profile — browser cache, cookies, and session data
+.vscode/chrome-debug-profile/
+
+# OS
+.DS_Store
+
+# Editor local settings
+.vscode/*.code-workspace
