@@ -8,7 +8,6 @@
       "url": "http://localhost:8080",
       "webRoot": "${workspaceFolder}",
       "runtimeExecutable": "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
-      "userDataDir": "${workspaceFolder}/.vscode/chrome-debug-profile",
       "preLaunchTask": "Prepare portfolio debug"
     },
     {
@@ -17,9 +16,7 @@
       "name": "Launch Chrome only (no server task)",
       "url": "http://localhost:8080",
       "webRoot": "${workspaceFolder}",
-      "runtimeExecutable": "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
-      "userDataDir": "${workspaceFolder}/.vscode/chrome-debug-profile",
-      "preLaunchTask": "Kill stale debug Chrome"
+      "runtimeExecutable": "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
     },
     {
       "type": "chrome",
