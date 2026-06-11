@@ -18,7 +18,7 @@
     {
       "label": "Kill stale debug Chrome",
       "type": "shell",
-      "command": "pkill -f 'ms-vscode.js-debug/.profile' 2>/dev/null || true; pkill -f 'chrome-debug-profile' 2>/dev/null || true; echo 'Closed stale debug Chrome sessions'",
+      "command": "pkill -9 -f 'ms-vscode.js-debug/.profile' 2>/dev/null || true; pkill -9 -f 'chrome-debug-profile' 2>/dev/null || true; echo 'Closed stale debug Chrome sessions'",
       "problemMatcher": [],
       "presentation": {
         "reveal": "always",

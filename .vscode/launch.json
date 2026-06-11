@@ -2,7 +2,7 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "type": "pwa-chrome",
+      "type": "chrome",
       "request": "launch",
       "name": "Launch Portfolio (server + Chrome)",
       "url": "http://localhost:8080",
@@ -12,7 +12,7 @@
       "preLaunchTask": "Prepare portfolio debug"
     },
     {
-      "type": "pwa-chrome",
+      "type": "chrome",
       "request": "launch",
       "name": "Launch Chrome only (no server task)",
       "url": "http://localhost:8080",
@@ -22,12 +22,12 @@
       "preLaunchTask": "Kill stale debug Chrome"
     },
     {
-      "type": "pwa-chrome",
+      "type": "chrome",
       "request": "attach",
       "name": "Attach to Chrome (port 9222)",
       "port": 9222,
       "webRoot": "${workspaceFolder}",
-      "urlFilter": "http://localhost:8080/*"
+      "url": "http://localhost:8080"
     }
   ]
 }

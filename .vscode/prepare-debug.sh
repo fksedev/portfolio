@@ -2,8 +2,8 @@
 set -e
 
 # Kill leftover Chrome instances from Cursor/VS Code debug sessions
-pkill -f "ms-vscode.js-debug/.profile" 2>/dev/null || true
-pkill -f "${0:a:h}/chrome-debug-profile" 2>/dev/null || true
+pkill -9 -f "ms-vscode.js-debug/.profile" 2>/dev/null || true
+pkill -9 -f "${0:a:h}/chrome-debug-profile" 2>/dev/null || true
 
 PROFILE_DIR="${0:a:h}/chrome-debug-profile"
 rm -f "$PROFILE_DIR/SingletonLock" "$PROFILE_DIR/SingletonCookie" 2>/dev/null || true

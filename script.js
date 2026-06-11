@@ -14,8 +14,9 @@
 
   // Mobile menu toggle
   navToggle.addEventListener('click', () => {
-    navToggle.classList.toggle('active');
-    navLinks.classList.toggle('open');
+    const isOpen = navLinks.classList.toggle('open');
+    navToggle.classList.toggle('active', isOpen);
+    navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
   });
 
   // Close mobile menu on link click
@@ -23,6 +24,7 @@
     link.addEventListener('click', () => {
       navToggle.classList.remove('active');
       navLinks.classList.remove('open');
+      navToggle.setAttribute('aria-expanded', 'false');
     });
   });
 
@@ -41,7 +43,17 @@
   );
   revealElements.forEach(el => revealObserver.observe(el));
 
-  // Contact form submission feedback
+  // Contact form — redirect back after FormSubmit success
+  const formNext = document.getElementById('formNext');
+  const formSuccess = document.getElementById('formSuccess');
+  if (formNext) {
+    formNext.value = `${window.location.origin}${window.location.pathname}#contact-sent`;
+  }
+  if (window.location.hash === '#contact-sent' && formSuccess && contactForm) {
+    formSuccess.hidden = false;
+    contactForm.hidden = true;
+    history.replaceState(null, '', `${window.location.pathname}#contact`);
+  }
   if (contactForm) {
     contactForm.addEventListener('submit', () => {
       const btnText = submitBtn.querySelector('.btn-text');
@@ -128,9 +140,10 @@
     lightboxNext.hidden = single;
   }
 
-  function openLightbox(images, index) {
+  function openLightbox(images, index, options = {}) {
     lightboxImages = images;
     lightboxIndex = index;
+    lightbox.classList.toggle('lightbox-profile', !!options.profile);
     updateLightbox();
     lightbox.hidden = false;
     document.body.classList.add('lightbox-open');
@@ -139,6 +152,7 @@
 
   function closeLightbox() {
     lightbox.hidden = true;
+    lightbox.classList.remove('lightbox-profile');
     document.body.classList.remove('lightbox-open');
     lightboxImage.src = '';
   }
@@ -157,6 +171,62 @@
     });
   });
 
+  document.querySelectorAll('[data-profile-lightbox]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const img = btn.querySelector('img');
+      if (img) openLightbox([img], 0, { profile: true });
+    });
+  });
+
+  // Nav profile — dropdown menu (GitHub-style)
+  const profileMenu = document.getElementById('profileMenu');
+  const navProfileBtn = document.getElementById('navProfileBtn');
+  const navProfileWrap = document.querySelector('.nav-profile-wrap');
+
+  function isProfileMenuOpen() {
+    return profileMenu && !profileMenu.hidden;
+  }
+
+  function openProfileMenu() {
+    if (!profileMenu) return;
+    profileMenu.hidden = false;
+    navProfileBtn?.classList.add('is-open');
+    navProfileBtn?.setAttribute('aria-expanded', 'true');
+  }
+
+  function closeProfileMenu() {
+    if (!profileMenu) return;
+    profileMenu.hidden = true;
+    navProfileBtn?.classList.remove('is-open');
+    navProfileBtn?.setAttribute('aria-expanded', 'false');
+  }
+
+  function toggleProfileMenu() {
+    if (isProfileMenuOpen()) closeProfileMenu();
+    else openProfileMenu();
+  }
+
+  navProfileBtn?.addEventListener('click', (e) => {
+    e.stopPropagation();
+    toggleProfileMenu();
+  });
+
+  profileMenu?.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => closeProfileMenu());
+  });
+
+  document.addEventListener('click', (e) => {
+    if (!isProfileMenuOpen()) return;
+    if (!navProfileWrap?.contains(e.target)) closeProfileMenu();
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (isProfileMenuOpen() && e.key === 'Escape') {
+      closeProfileMenu();
+      navProfileBtn?.focus();
+    }
+  });
+
   lightbox.querySelectorAll('[data-lightbox-close]').forEach(el => {
     el.addEventListener('click', closeLightbox);
   });
@@ -172,10 +242,11 @@
   });
 
   document.addEventListener('keydown', (e) => {
-    if (lightbox.hidden) return;
-    if (e.key === 'Escape') closeLightbox();
-    if (e.key === 'ArrowLeft') stepLightbox(-1);
-    if (e.key === 'ArrowRight') stepLightbox(1);
+    if (!lightbox.hidden) {
+      if (e.key === 'Escape') closeLightbox();
+      if (e.key === 'ArrowLeft') stepLightbox(-1);
+      if (e.key === 'ArrowRight') stepLightbox(1);
+    }
   });
 
   // Multi-variant app tabs (e.g. Daadi's Kitchen — User / Driver / Manager)

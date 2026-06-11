@@ -10,28 +10,63 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css?v=4" />
 </head>
 <body>
 
   <!-- Navigation -->
   <nav class="nav" id="nav">
     <div class="nav-inner container">
-      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
-        <span></span><span></span><span></span>
-      </button>
-      <ul class="nav-links" id="navLinks">
-        <li><a href="#about">About</a></li>
-        <li><a href="#apps">Apps</a></li>
-        <li><a href="#case-studies">Case Studies</a></li>
-        <li><a href="#testimonials">Reviews</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#contact" class="nav-cta">Hire Me</a></li>
+      <div class="nav-left">
+        <button type="button" class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+      <ul class="nav-links" id="navLinks" role="menubar">
+        <li role="none"><a href="#about" role="menuitem">About</a></li>
+        <li role="none"><a href="#apps" role="menuitem">Apps</a></li>
+        <li role="none"><a href="#case-studies" role="menuitem">Case Studies</a></li>
+        <li role="none"><a href="#testimonials" role="menuitem">Reviews</a></li>
+        <li role="none"><a href="#skills" role="menuitem">Skills</a></li>
+        <li role="none"><a href="#contact" class="nav-cta" role="menuitem">Hire Me</a></li>
       </ul>
-      <a href="#" class="nav-profile">
-        <img src="images/profile.jpeg" alt="" class="nav-avatar" width="40" height="40" loading="eager" />
-        <span class="nav-profile-name">Faizan Khaliq</span>
-      </a>
+      <div class="nav-right">
+        <div class="nav-profile-wrap">
+          <button type="button" class="nav-profile" id="navProfileBtn" aria-haspopup="true" aria-expanded="false" aria-controls="profileMenu">
+            <img src="images/profile.jpeg" alt="" class="nav-avatar" width="40" height="40" loading="eager" />
+            <span class="nav-profile-name">Faizan Khaliq</span>
+          </button>
+          <div class="profile-menu" id="profileMenu" hidden role="menu" aria-label="Contact details">
+            <div class="profile-menu-header">
+              <img src="images/profile.jpeg" alt="" class="profile-menu-avatar" width="48" height="48" />
+              <div class="profile-menu-identity">
+                <strong>Faizan Khaliq</strong>
+                <span>Senior Flutter Mobile App Developer</span>
+                <span class="profile-menu-meta">$25/hr · 8+ yrs · 30+ apps</span>
+              </div>
+            </div>
+            <div class="profile-menu-divider" role="separator"></div>
+            <a href="mailto:fksedev@gmail.com" class="profile-menu-item" role="menuitem">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              fksedev@gmail.com
+            </a>
+            <a href="tel:+923165889996" class="profile-menu-item" role="menuitem">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+              +92 316 588 9996
+            </a>
+            <div class="profile-menu-divider" role="separator"></div>
+            <a href="https://www.upwork.com/freelancers/~0139bf00dbe34dcc1f" target="_blank" rel="noopener" class="profile-menu-item" role="menuitem">Upwork profile</a>
+            <a href="https://www.linkedin.com/in/faizan-khaliq-068031130" target="_blank" rel="noopener" class="profile-menu-item" role="menuitem">LinkedIn</a>
+            <a href="https://github.com/fksedev" target="_blank" rel="noopener" class="profile-menu-item" role="menuitem">GitHub</a>
+            <a href="https://www.freelancer.com/u/fksedevops" target="_blank" rel="noopener" class="profile-menu-item" role="menuitem">Freelancer.com</a>
+            <div class="profile-menu-divider" role="separator"></div>
+            <span class="profile-menu-note">English (Fluent) · Urdu (Native)</span>
+            <span class="profile-menu-note">BS Software Engineering — APCOMS / UET</span>
+            <div class="profile-menu-divider" role="separator"></div>
+            <a href="#contact" class="profile-menu-item profile-menu-cta" role="menuitem">Hire Me</a>
+          </div>
+        </div>
+      </div>
     </div>
   </nav>
 
@@ -40,7 +75,9 @@
     <div class="hero-bg"></div>
     <div class="container hero-content">
       <div class="hero-profile reveal">
-        <img src="images/profile.jpeg" alt="Faizan Khaliq — Senior Flutter Developer" class="hero-avatar" width="140" height="140" loading="eager" />
+        <button type="button" class="hero-avatar-btn" data-profile-lightbox aria-label="View profile photo full size">
+          <img src="images/profile.jpeg" alt="Faizan Khaliq — Senior Flutter Developer" class="hero-avatar" width="140" height="140" loading="eager" />
+        </button>
       </div>
       <div class="hero-badge reveal">Available for new projects</div>
       <h1 class="hero-title reveal">Faizan Khaliq</h1>
@@ -1104,11 +1141,16 @@
           </div>
         </div>
 
-        <form class="contact-form reveal" id="contactForm" action="https://formsubmit.co/fksedev@gmail.com" method="POST">
+        <div class="form-success reveal" id="formSuccess" hidden>
+          <p>Thanks! Your message was sent. I'll get back to you within 24 hours.</p>
+        </div>
+
+        <form class="contact-form reveal" id="contactForm" action="https://formsubmit.co/2683b2e3b9787cf845325eaa6258f3da" method="POST">
           <input type="hidden" name="_subject" value="New Portfolio Inquiry — Faizan Khaliq" />
           <input type="hidden" name="_captcha" value="false" />
           <input type="hidden" name="_template" value="table" />
-          <input type="text" name="_honey" style="display:none" />
+          <input type="hidden" name="_next" id="formNext" value="" />
+          <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" />
 
           <div class="form-group">
             <label for="name">Your Name</label>
@@ -1202,7 +1244,7 @@
     <p class="lightbox-counter" id="lightboxCounter" aria-live="polite"></p>
   </div>
 
-  <script src="reviews.js"></script>
-  <script src="script.js"></script>
+  <script src="reviews.js?v=2"></script>
+  <script src="script.js?v=4"></script>
 </body>
 </html>
