@@ -2,120 +2,1207 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Faizan Khaliq | Flutter Developer</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Faizan Khaliq — Senior Flutter Developer. 8+ years, 30+ app launches. MVPs, marketplaces, SaaS, on-demand apps. Firebase, clean architecture, App Store & Play Store." />
+  <meta name="keywords" content="Flutter Developer, Flutter App Development, Firebase Expert, Dart, Cross Platform Apps, Mobile App Development, MVP Development, Startup Apps" />
+  <meta name="author" content="Faizan Khaliq" />
+  <title>Faizan Khaliq | Senior Flutter Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-<header class="hero">
-  <h1>Faizan Khaliq</h1>
-  <p class="subtitle">Senior Flutter Mobile App Developer</p>
-  <p class="desc">Android • iOS • Web</p>
+  <!-- Navigation -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner container">
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about">About</a></li>
+        <li><a href="#apps">Apps</a></li>
+        <li><a href="#case-studies">Case Studies</a></li>
+        <li><a href="#testimonials">Reviews</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact" class="nav-cta">Hire Me</a></li>
+      </ul>
+      <a href="#" class="nav-profile">
+        <img src="images/profile.jpeg" alt="" class="nav-avatar" width="40" height="40" loading="eager" />
+        <span class="nav-profile-name">Faizan Khaliq</span>
+      </a>
+    </div>
+  </nav>
 
-  <div class="hero-buttons">
-    <a href="#projects" class="btn primary">View Projects</a>
-    <a href="#contact" class="btn secondary">Contact Me</a>
-    <a href="https://www.upwork.com/freelancers/~0139bf00dbe34dcc1f" target="_blank" class="btn primary">Hire Me on Upwork</a>
-    <a href="https://www.freelancer.com/u/fksedevops" target="_blank" class="btn primary">Hire Me on Freelancer</a>
+  <!-- Hero -->
+  <header class="hero" id="hero">
+    <div class="hero-bg"></div>
+    <div class="container hero-content">
+      <div class="hero-profile reveal">
+        <img src="images/profile.jpeg" alt="Faizan Khaliq — Senior Flutter Developer" class="hero-avatar" width="140" height="140" loading="eager" />
+      </div>
+      <div class="hero-badge reveal">Available for new projects</div>
+      <h1 class="hero-title reveal">Faizan Khaliq</h1>
+      <p class="hero-role reveal">Senior Flutter Mobile App Developer</p>
+      <p class="hero-tagline reveal">
+        I help startups and growing businesses transform ideas into high-performance
+        Flutter apps for iOS and Android — fast to launch, easy to scale, built to last.
+      </p>
+      <div class="hero-stats reveal">
+        <div class="stat">
+          <span class="stat-num">8+</span>
+          <span class="stat-label">Years Experience</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num">30+</span>
+          <span class="stat-label">Apps Launched</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num">$25</span>
+          <span class="stat-label">Per Hour</span>
+        </div>
+      </div>
+      <div class="hero-actions reveal">
+        <a href="#apps" class="btn btn-primary">View My Apps</a>
+        <a href="#contact" class="btn btn-outline">Get In Touch</a>
+        <a href="https://www.upwork.com/freelancers/~0139bf00dbe34dcc1f" target="_blank" rel="noopener" class="btn btn-ghost">Upwork</a>
+      </div>
+    </div>
+    <a href="#about" class="scroll-hint" aria-label="Scroll down">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+    </a>
+  </header>
+
+  <!-- About -->
+  <section id="about" class="section">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">About Me</span>
+        <h2>Building apps that scale with your business</h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-text reveal">
+          <p>
+            With <strong>8+ years of experience</strong> and <strong>30+ successful app launches</strong>,
+            I specialize in building Flutter mobile apps that are fast to launch, easy to scale,
+            and optimized for performance. I don't just build screens — I design clean, maintainable
+            architectures that support long-term growth without costly rewrites.
+          </p>
+          <p>
+            From startup MVPs to production marketplaces and SaaS platforms, I deliver
+            secure Firebase backends, modern UI/UX with smooth animations, and
+            maintainable codebases ready for the App Store and Google Play.
+          </p>
+        </div>
+        <div class="about-highlights reveal">
+          <div class="highlight-card">
+            <div class="highlight-icon">🚀</div>
+            <h3>Fast MVP Delivery</h3>
+            <p>Rapid validation and market testing for startups</p>
+          </div>
+          <div class="highlight-card">
+            <div class="highlight-icon">🏗️</div>
+            <h3>Clean Architecture</h3>
+            <p>Bloc, Riverpod, Provider, GetX & modular code that scales</p>
+          </div>
+          <div class="highlight-card">
+            <div class="highlight-icon">🔥</div>
+            <h3>Firebase Expert</h3>
+            <p>Auth, Firestore, Cloud Functions, FCM</p>
+          </div>
+          <div class="highlight-card">
+            <div class="highlight-icon">📱</div>
+            <h3>Store Ready</h3>
+            <p>Full deployment to App Store & Play Store</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services" class="section section-alt">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">What I Build</span>
+        <h2>Apps across every category</h2>
+      </div>
+      <div class="services-grid reveal">
+        <div class="service-card">
+          <span class="service-icon">💡</span>
+          <h3>Startup MVPs</h3>
+          <p>Rapid validation and market testing</p>
+        </div>
+        <div class="service-card">
+          <span class="service-icon">🛒</span>
+          <h3>Marketplace Apps</h3>
+          <p>Multi-vendor, buyer-seller platforms</p>
+        </div>
+        <div class="service-card">
+          <span class="service-icon">💳</span>
+          <h3>SaaS & Subscriptions</h3>
+          <p>Stripe billing and recurring payments</p>
+        </div>
+        <div class="service-card">
+          <span class="service-icon">🚗</span>
+          <h3>On-Demand Apps</h3>
+          <p>Delivery, booking, ride-sharing</p>
+        </div>
+        <div class="service-card">
+          <span class="service-icon">👥</span>
+          <h3>Social & Community</h3>
+          <p>Networking and real-time chat</p>
+        </div>
+        <div class="service-card">
+          <span class="service-icon">⚙️</span>
+          <h3>Business Automation</h3>
+          <p>Productivity and workflow apps</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- App Portfolio -->
+  <section id="apps" class="section">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Portfolio</span>
+        <h2>Production apps & projects</h2>
+        <p class="section-desc">Live apps on the App Store, Google Play, and production platforms — built with Flutter.</p>
+      </div>
+      <div class="apps-grid">
+
+        <article class="app-card reveal">
+          <div class="app-image app-carousel app-carousel-screenshots" data-carousel>
+            <div class="carousel-track">
+              <img src="images/sentimeter-1.png" alt="Sentimeter Node — survey splash screen" loading="lazy" />
+              <img src="images/sentimeter-2.png" alt="Sentimeter Node — CX dashboard" loading="lazy" />
+              <img src="images/sentimeter-3.png" alt="Sentimeter Node — rating survey" loading="lazy" />
+              <img src="images/sentimeter-4.png" alt="Sentimeter Node — follow-up form" loading="lazy" />
+            </div>
+            <div class="carousel-dots" aria-hidden="true">
+              <button type="button" class="carousel-dot active" data-slide="0" aria-label="Slide 1"></button>
+              <button type="button" class="carousel-dot" data-slide="1" aria-label="Slide 2"></button>
+              <button type="button" class="carousel-dot" data-slide="2" aria-label="Slide 3"></button>
+              <button type="button" class="carousel-dot" data-slide="3" aria-label="Slide 4"></button>
+            </div>
+            <span class="app-category">Feedback</span>
+          </div>
+          <div class="app-body">
+            <h3>Sentimeter Node</h3>
+            <p class="app-desc">Feedback and sentiment analytics platform for collecting, analyzing, and visualizing customer insights.</p>
+            <div class="app-tech"><span>Flutter</span><span>Firebase</span><span>Analytics</span></div>
+            <div class="app-links">
+              <a href="https://play.google.com/store/apps/details?id=com.sentimeterNode" target="_blank" rel="noopener" class="store-link">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M3.609 1.814L13.792 12 3.61 22.186a1.35 1.35 0 01-.376-.958V2.772c0-.36.137-.707.375-.958zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.198l2.807 1.626a1.35 1.35 0 010 2.34l-2.808 1.626L15.206 12l2.492-2.491zM5.864 2.658L16.8 8.99l-2.302 2.302-8.634-8.634z"/></svg>
+                Google Play
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="app-card reveal">
+          <div class="app-image app-carousel app-carousel-screenshots" data-carousel>
+            <div class="carousel-track">
+              <img src="images/mls-1.png" alt="MLS Connect — property listings" loading="lazy" />
+              <img src="images/mls-2.png" alt="MLS Connect — search and filters" loading="lazy" />
+              <img src="images/mls-3.png" alt="MLS Connect — property details" loading="lazy" />
+            </div>
+            <div class="carousel-dots" aria-hidden="true">
+              <button type="button" class="carousel-dot active" data-slide="0" aria-label="Slide 1"></button>
+              <button type="button" class="carousel-dot" data-slide="1" aria-label="Slide 2"></button>
+              <button type="button" class="carousel-dot" data-slide="2" aria-label="Slide 3"></button>
+            </div>
+            <span class="app-category">Real Estate</span>
+          </div>
+          <div class="app-body">
+            <h3>MLS Connect</h3>
+            <p class="app-desc">Real estate platform connecting agents, buyers, and property listings with live MLS data sync.</p>
+            <div class="app-tech"><span>Flutter</span><span>REST API</span><span>Maps</span></div>
+            <div class="app-links">
+              <a href="https://play.google.com/store/apps/details?id=com.immosquare.mls.connect" target="_blank" rel="noopener" class="store-link">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M3.609 1.814L13.792 12 3.61 22.186a1.35 1.35 0 01-.376-.958V2.772c0-.36.137-.707.375-.958zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.198l2.807 1.626a1.35 1.35 0 010 2.34l-2.808 1.626L15.206 12l2.492-2.491zM5.864 2.658L16.8 8.99l-2.302 2.302-8.634-8.634z"/></svg>
+                Google Play
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="app-card reveal">
+          <div class="app-image app-carousel app-carousel-screenshots" data-carousel>
+            <div class="carousel-track">
+              <img src="images/core-direction-1.webp" alt="Core Direction — screen 1" loading="lazy" />
+              <img src="images/core-direction-2.webp" alt="Core Direction — screen 2" loading="lazy" />
+              <img src="images/core-direction-3.webp" alt="Core Direction — screen 3" loading="lazy" />
+              <img src="images/core-direction-4.webp" alt="Core Direction — screen 4" loading="lazy" />
+              <img src="images/core-direction-5.webp" alt="Core Direction — screen 5" loading="lazy" />
+              <img src="images/core-direction-6.webp" alt="Core Direction — screen 6" loading="lazy" />
+              <img src="images/core-direction-7.webp" alt="Core Direction — screen 7" loading="lazy" />
+              <img src="images/core-direction-8.webp" alt="Core Direction — screen 8" loading="lazy" />
+            </div>
+            <div class="carousel-dots carousel-dots-many" aria-hidden="true">
+              <button type="button" class="carousel-dot active" data-slide="0" aria-label="Slide 1"></button>
+              <button type="button" class="carousel-dot" data-slide="1" aria-label="Slide 2"></button>
+              <button type="button" class="carousel-dot" data-slide="2" aria-label="Slide 3"></button>
+              <button type="button" class="carousel-dot" data-slide="3" aria-label="Slide 4"></button>
+              <button type="button" class="carousel-dot" data-slide="4" aria-label="Slide 5"></button>
+              <button type="button" class="carousel-dot" data-slide="5" aria-label="Slide 6"></button>
+              <button type="button" class="carousel-dot" data-slide="6" aria-label="Slide 7"></button>
+              <button type="button" class="carousel-dot" data-slide="7" aria-label="Slide 8"></button>
+            </div>
+            <span class="app-category">Health</span>
+          </div>
+          <div class="app-body">
+            <h3>Core Direction</h3>
+            <p class="app-desc">Health and wellness app with personalized fitness tracking, goals, and engagement features.</p>
+            <div class="app-tech"><span>Flutter</span><span>Firebase</span><span>iOS</span></div>
+            <div class="app-links">
+              <a href="https://apps.apple.com/ae/app/core-direction/id1644608047" target="_blank" rel="noopener" class="store-link store-apple">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+                App Store
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="app-card reveal">
+          <div class="app-image app-carousel app-carousel-screenshots" data-carousel>
+            <div class="carousel-track">
+              <img src="images/edX-1.jpg" alt="edX — course catalog" loading="lazy" />
+              <img src="images/edX-2.jpg" alt="edX — course details" loading="lazy" />
+              <img src="images/edX-3.jpg" alt="edX — video learning" loading="lazy" />
+              <img src="images/edX-4.jpg" alt="edX — progress tracking" loading="lazy" />
+              <img src="images/edX-5.jpg" alt="edX — course browse" loading="lazy" />
+              <img src="images/edX-6.jpg" alt="edX — learning dashboard" loading="lazy" />
+              <img src="images/edX-7.jpg" alt="edX — course enrollment" loading="lazy" />
+            </div>
+            <div class="carousel-dots carousel-dots-many" aria-hidden="true">
+              <button type="button" class="carousel-dot active" data-slide="0" aria-label="Slide 1"></button>
+              <button type="button" class="carousel-dot" data-slide="1" aria-label="Slide 2"></button>
+              <button type="button" class="carousel-dot" data-slide="2" aria-label="Slide 3"></button>
+              <button type="button" class="carousel-dot" data-slide="3" aria-label="Slide 4"></button>
+              <button type="button" class="carousel-dot" data-slide="4" aria-label="Slide 5"></button>
+              <button type="button" class="carousel-dot" data-slide="5" aria-label="Slide 6"></button>
+              <button type="button" class="carousel-dot" data-slide="6" aria-label="Slide 7"></button>
+            </div>
+            <span class="app-category">Education</span>
+          </div>
+          <div class="app-body">
+            <h3>edX</h3>
+            <p class="app-desc">Courses by Harvard & MIT — online learning platform with course browsing, video playback, and progress tracking.</p>
+            <div class="app-tech"><span>Flutter</span><span>Video</span><span>LMS</span></div>
+            <div class="app-links">
+              <a href="https://play.google.com/store/apps/details?id=org.edx.mobile" target="_blank" rel="noopener" class="store-link">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M3.609 1.814L13.792 12 3.61 22.186a1.35 1.35 0 01-.376-.958V2.772c0-.36.137-.707.375-.958zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.198l2.807 1.626a1.35 1.35 0 010 2.34l-2.808 1.626L15.206 12l2.492-2.491zM5.864 2.658L16.8 8.99l-2.302 2.302-8.634-8.634z"/></svg>
+                Google Play
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="app-card reveal">
+          <div class="app-image app-carousel app-carousel-screenshots" data-carousel>
+            <div class="carousel-track">
+              <img src="images/goally-1.png" alt="Goally — learning screen 1" loading="lazy" />
+              <img src="images/goally-2.png" alt="Goally — learning screen 2" loading="lazy" />
+              <img src="images/goally-3.png" alt="Goally — learning screen 3" loading="lazy" />
+              <img src="images/goally-4.png" alt="Goally — learning screen 4" loading="lazy" />
+              <img src="images/goally-5.png" alt="Goally — learning screen 5" loading="lazy" />
+              <img src="images/goally6.png" alt="Goally — learning screen 6" loading="lazy" />
+              <img src="images/goally-7.png" alt="Goally — learning screen 7" loading="lazy" />
+              <img src="images/goally-8.png" alt="Goally — learning screen 8" loading="lazy" />
+            </div>
+            <div class="carousel-dots carousel-dots-many" aria-hidden="true">
+              <button type="button" class="carousel-dot active" data-slide="0" aria-label="Slide 1"></button>
+              <button type="button" class="carousel-dot" data-slide="1" aria-label="Slide 2"></button>
+              <button type="button" class="carousel-dot" data-slide="2" aria-label="Slide 3"></button>
+              <button type="button" class="carousel-dot" data-slide="3" aria-label="Slide 4"></button>
+              <button type="button" class="carousel-dot" data-slide="4" aria-label="Slide 5"></button>
+              <button type="button" class="carousel-dot" data-slide="5" aria-label="Slide 6"></button>
+              <button type="button" class="carousel-dot" data-slide="6" aria-label="Slide 7"></button>
+              <button type="button" class="carousel-dot" data-slide="7" aria-label="Slide 8"></button>
+            </div>
+            <span class="app-category">Education</span>
+          </div>
+          <div class="app-body">
+            <h3>Goally</h3>
+            <p class="app-desc">Learning apps for kids — interactive routines, rewards, and parent-guided developmental tools.</p>
+            <div class="app-tech"><span>Flutter</span><span>Kids UX</span><span>Firebase</span></div>
+            <div class="app-links">
+              <a href="https://play.google.com/store/apps/details?id=com.getgoally.learnerapp" target="_blank" rel="noopener" class="store-link">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M3.609 1.814L13.792 12 3.61 22.186a1.35 1.35 0 01-.376-.958V2.772c0-.36.137-.707.375-.958zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.198l2.807 1.626a1.35 1.35 0 010 2.34l-2.808 1.626L15.206 12l2.492-2.491zM5.864 2.658L16.8 8.99l-2.302 2.302-8.634-8.634z"/></svg>
+                Google Play
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="app-card reveal">
+          <div class="app-image app-carousel app-carousel-screenshots" data-carousel>
+            <div class="carousel-track">
+              <img src="images/flyereats-1.jpg" alt="Flyereats — merchant screen 1" loading="lazy" />
+              <img src="images/flyereats-2.jpg" alt="Flyereats — merchant screen 2" loading="lazy" />
+              <img src="images/flyereats-3.jpg" alt="Flyereats — merchant screen 3" loading="lazy" />
+              <img src="images/flyereats-4.jpg" alt="Flyereats — merchant screen 4" loading="lazy" />
+              <img src="images/flyereats-5.jpg" alt="Flyereats — merchant screen 5" loading="lazy" />
+              <img src="images/flyereats-6.jpg" alt="Flyereats — merchant screen 6" loading="lazy" />
+            </div>
+            <div class="carousel-dots carousel-dots-many" aria-hidden="true">
+              <button type="button" class="carousel-dot active" data-slide="0" aria-label="Slide 1"></button>
+              <button type="button" class="carousel-dot" data-slide="1" aria-label="Slide 2"></button>
+              <button type="button" class="carousel-dot" data-slide="2" aria-label="Slide 3"></button>
+              <button type="button" class="carousel-dot" data-slide="3" aria-label="Slide 4"></button>
+              <button type="button" class="carousel-dot" data-slide="4" aria-label="Slide 5"></button>
+              <button type="button" class="carousel-dot" data-slide="5" aria-label="Slide 6"></button>
+            </div>
+            <span class="app-category">Food Delivery</span>
+          </div>
+          <div class="app-body">
+            <h3>Flyereats</h3>
+            <p class="app-desc">Food delivery merchant app for restaurants to manage orders, menus, and deliveries.</p>
+            <div class="app-tech"><span>Flutter</span><span>Firebase</span><span>Orders</span></div>
+            <div class="app-links">
+              <a href="https://play.google.com/store/apps/details?id=in.flyereats.merchants" target="_blank" rel="noopener" class="store-link">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M3.609 1.814L13.792 12 3.61 22.186a1.35 1.35 0 01-.376-.958V2.772c0-.36.137-.707.375-.958zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.198l2.807 1.626a1.35 1.35 0 010 2.34l-2.808 1.626L15.206 12l2.492-2.491zM5.864 2.658L16.8 8.99l-2.302 2.302-8.634-8.634z"/></svg>
+                Google Play
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="app-card reveal" data-app-tabs>
+          <div class="app-image app-carousel-screenshots">
+            <div class="carousel-panels">
+              <div class="carousel-panel active" data-panel="user" role="tabpanel">
+                <div class="app-carousel" data-carousel>
+                  <div class="carousel-track">
+                    <img src="images/daadiskitchen-user-1.png" alt="Daadi's Kitchen User — screen 1" loading="lazy" />
+                    <img src="images/daadiskitchen-user-2.png" alt="Daadi's Kitchen User — screen 2" loading="lazy" />
+                    <img src="images/daadiskitchen-user-3.png" alt="Daadi's Kitchen User — screen 3" loading="lazy" />
+                  </div>
+                  <div class="carousel-dots" aria-hidden="true">
+                    <button type="button" class="carousel-dot active" data-slide="0" aria-label="Slide 1"></button>
+                    <button type="button" class="carousel-dot" data-slide="1" aria-label="Slide 2"></button>
+                    <button type="button" class="carousel-dot" data-slide="2" aria-label="Slide 3"></button>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-panel" data-panel="driver" role="tabpanel" hidden>
+                <div class="app-carousel" data-carousel>
+                  <div class="carousel-track">
+                    <img src="images/daadiskitchen-driver-1.png" alt="Daadi's Kitchen Driver — screen 1" loading="lazy" />
+                    <img src="images/daadiskitchen-driver-2.png" alt="Daadi's Kitchen Driver — screen 2" loading="lazy" />
+                    <img src="images/daadiskitchen-driver-3.png" alt="Daadi's Kitchen Driver — screen 3" loading="lazy" />
+                  </div>
+                  <div class="carousel-dots" aria-hidden="true">
+                    <button type="button" class="carousel-dot active" data-slide="0" aria-label="Slide 1"></button>
+                    <button type="button" class="carousel-dot" data-slide="1" aria-label="Slide 2"></button>
+                    <button type="button" class="carousel-dot" data-slide="2" aria-label="Slide 3"></button>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-panel" data-panel="manager" role="tabpanel" hidden>
+                <div class="app-carousel" data-carousel>
+                  <div class="carousel-track">
+                    <img src="images/daadiskitchen-manager-1.png" alt="Daadi's Kitchen Manager — screen 1" loading="lazy" />
+                    <img src="images/daadiskitchen-manager-2.png" alt="Daadi's Kitchen Manager — screen 2" loading="lazy" />
+                    <img src="images/daadiskitchen-manager-3.png" alt="Daadi's Kitchen Manager — screen 3" loading="lazy" />
+                  </div>
+                  <div class="carousel-dots" aria-hidden="true">
+                    <button type="button" class="carousel-dot active" data-slide="0" aria-label="Slide 1"></button>
+                    <button type="button" class="carousel-dot" data-slide="1" aria-label="Slide 2"></button>
+                    <button type="button" class="carousel-dot" data-slide="2" aria-label="Slide 3"></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <span class="app-category">Food Delivery</span>
+          </div>
+          <div class="app-body">
+            <h3>Daadi's Kitchen</h3>
+            <p class="app-desc">Multi-app food delivery ecosystem — customer, driver, and manager apps with order tracking.</p>
+            <div class="app-tech"><span>Flutter</span><span>Firebase</span><span>Multi-app</span></div>
+            <div class="app-variant-tabs" role="tablist" aria-label="Daadi's Kitchen apps">
+              <button type="button" class="app-variant-tab active" role="tab" data-tab="user" aria-selected="true">User App</button>
+              <button type="button" class="app-variant-tab" role="tab" data-tab="driver" aria-selected="false">Driver App</button>
+              <button type="button" class="app-variant-tab" role="tab" data-tab="manager" aria-selected="false">Manager App</button>
+            </div>
+            <div class="app-links app-links-multi">
+              <a href="https://play.google.com/store/apps/details?id=com.daadiskitchen.daadiskitchenUser" target="_blank" rel="noopener" class="store-link store-link-sm">User App</a>
+              <a href="https://play.google.com/store/apps/details?id=com.daadiskitchen.daadiskitchenDriver" target="_blank" rel="noopener" class="store-link store-link-sm">Driver App</a>
+              <a href="https://play.google.com/store/apps/details?id=com.daadiskitchen.daadiskitchenManager" target="_blank" rel="noopener" class="store-link store-link-sm">Manager App</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="app-card reveal">
+          <div class="app-image app-carousel app-carousel-screenshots" data-carousel>
+            <div class="carousel-track">
+              <img src="images/salt-1.webp" alt="Salt — eCommerce screen 1" loading="lazy" />
+              <img src="images/salt-2.webp" alt="Salt — eCommerce screen 2" loading="lazy" />
+              <img src="images/salt-3.webp" alt="Salt — eCommerce screen 3" loading="lazy" />
+            </div>
+            <div class="carousel-dots" aria-hidden="true">
+              <button type="button" class="carousel-dot active" data-slide="0" aria-label="Slide 1"></button>
+              <button type="button" class="carousel-dot" data-slide="1" aria-label="Slide 2"></button>
+              <button type="button" class="carousel-dot" data-slide="2" aria-label="Slide 3"></button>
+            </div>
+            <span class="app-category">eCommerce</span>
+          </div>
+          <div class="app-body">
+            <h3>Salt</h3>
+            <p class="app-desc">eCommerce mobile application with product browsing, cart, and checkout experience.</p>
+            <div class="app-tech"><span>Flutter</span><span>iOS</span><span>Payments</span></div>
+            <div class="app-links">
+              <a href="https://apps.apple.com/us/app/salt-qa/id6502684288" target="_blank" rel="noopener" class="store-link store-apple">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+                App Store
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="app-card reveal">
+          <div class="app-image app-carousel app-carousel-screenshots" data-carousel>
+            <div class="carousel-track">
+              <img src="images/ktha-1.webp" alt="Ktha — screen 1" loading="lazy" />
+              <img src="images/ktha-2.webp" alt="Ktha — screen 2" loading="lazy" />
+              <img src="images/ktha-3.webp" alt="Ktha — screen 3" loading="lazy" />
+              <img src="images/ktha-4.webp" alt="Ktha — screen 4" loading="lazy" />
+              <img src="images/ktha-5.webp" alt="Ktha — screen 5" loading="lazy" />
+            </div>
+            <div class="carousel-dots carousel-dots-many" aria-hidden="true">
+              <button type="button" class="carousel-dot active" data-slide="0" aria-label="Slide 1"></button>
+              <button type="button" class="carousel-dot" data-slide="1" aria-label="Slide 2"></button>
+              <button type="button" class="carousel-dot" data-slide="2" aria-label="Slide 3"></button>
+              <button type="button" class="carousel-dot" data-slide="3" aria-label="Slide 4"></button>
+              <button type="button" class="carousel-dot" data-slide="4" aria-label="Slide 5"></button>
+            </div>
+            <span class="app-category">Mobile App</span>
+          </div>
+          <div class="app-body">
+            <h3>Ktha</h3>
+            <p class="app-desc">Production mobile application with modern UI and seamless user experience on iOS.</p>
+            <div class="app-tech"><span>Flutter</span><span>iOS</span><span>UI/UX</span></div>
+            <div class="app-links">
+              <a href="https://apps.apple.com/us/app/ktha/id6670529315" target="_blank" rel="noopener" class="store-link store-apple">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+                App Store
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="app-card reveal">
+          <div class="app-image app-carousel app-carousel-screenshots" data-carousel>
+            <div class="carousel-track">
+              <img src="images/rehab-1.webp" alt="Rehab App — screen 1" loading="lazy" />
+              <img src="images/rehab-2.webp" alt="Rehab App — screen 2" loading="lazy" />
+              <img src="images/rehab-3.webp" alt="Rehab App — screen 3" loading="lazy" />
+              <img src="images/rehab-4.webp" alt="Rehab App — screen 4" loading="lazy" />
+              <img src="images/rehab-5.webp" alt="Rehab App — screen 5" loading="lazy" />
+              <img src="images/rehab-6.webp" alt="Rehab App — screen 6" loading="lazy" />
+              <img src="images/rehab-7.webp" alt="Rehab App — screen 7" loading="lazy" />
+              <img src="images/rehab-8.webp" alt="Rehab App — screen 8" loading="lazy" />
+              <img src="images/rehab-9.webp" alt="Rehab App — screen 9" loading="lazy" />
+              <img src="images/rehab-10.webp" alt="Rehab App — screen 10" loading="lazy" />
+            </div>
+            <div class="carousel-dots carousel-dots-many" aria-hidden="true">
+              <button type="button" class="carousel-dot active" data-slide="0" aria-label="Slide 1"></button>
+              <button type="button" class="carousel-dot" data-slide="1" aria-label="Slide 2"></button>
+              <button type="button" class="carousel-dot" data-slide="2" aria-label="Slide 3"></button>
+              <button type="button" class="carousel-dot" data-slide="3" aria-label="Slide 4"></button>
+              <button type="button" class="carousel-dot" data-slide="4" aria-label="Slide 5"></button>
+              <button type="button" class="carousel-dot" data-slide="5" aria-label="Slide 6"></button>
+              <button type="button" class="carousel-dot" data-slide="6" aria-label="Slide 7"></button>
+              <button type="button" class="carousel-dot" data-slide="7" aria-label="Slide 8"></button>
+              <button type="button" class="carousel-dot" data-slide="8" aria-label="Slide 9"></button>
+              <button type="button" class="carousel-dot" data-slide="9" aria-label="Slide 10"></button>
+            </div>
+            <span class="app-category">Rehab & Wellness</span>
+          </div>
+          <div class="app-body">
+            <h3>Rehab App</h3>
+            <p class="app-desc">Rehabilitation and cognitive wellness app with guided exercises and progress tracking.</p>
+            <div class="app-tech"><span>Flutter</span><span>iOS</span><span>Health</span></div>
+            <div class="app-links">
+              <a href="https://apps.apple.com/us/app/plasticity-game/id6758449741" target="_blank" rel="noopener" class="store-link store-apple">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+                App Store
+              </a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Case Studies -->
+  <section id="case-studies" class="section section-alt">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Case Studies</span>
+        <h2>How I solve real problems</h2>
+        <p class="section-desc">Deep dives into every production app in the portfolio — architecture, challenges, and outcomes.</p>
+      </div>
+
+      <div class="case-studies">
+
+        <article class="case-study reveal">
+          <div class="case-number">01</div>
+          <div class="case-content">
+            <span class="case-tag">Feedback · Flutter · Firebase</span>
+            <h3>Sentimeter Node — Customer Feedback Intelligence</h3>
+            <p class="case-intro">A feedback and sentiment analytics platform helping businesses collect, analyze, and act on customer insights in real time.</p>
+            <div class="case-gallery">
+              <img src="images/sentimeter-1.png" alt="Sentimeter Node survey splash" loading="lazy" />
+              <img src="images/sentimeter-2.png" alt="Sentimeter Node CX dashboard" loading="lazy" />
+              <img src="images/sentimeter-3.png" alt="Sentimeter Node rating survey" loading="lazy" />
+              <img src="images/sentimeter-4.png" alt="Sentimeter Node follow-up form" loading="lazy" />
+            </div>
+            <div class="case-details">
+              <div class="case-block">
+                <h4>Challenge</h4>
+                <p>Build a mobile-first tool that collects multi-channel feedback, visualizes sentiment trends, and syncs data in real time for distributed teams.</p>
+              </div>
+              <div class="case-block">
+                <h4>Solution</h4>
+                <ul>
+                  <li>Flutter app with Firebase Firestore for live data sync</li>
+                  <li>Custom chart visualizations for sentiment trends and KPIs</li>
+                  <li>Role-based access with Firebase Authentication</li>
+                  <li>Paginated queries optimized for large feedback datasets</li>
+                </ul>
+              </div>
+              <div class="case-block">
+                <h4>Outcome</h4>
+                <p>Live on Google Play with a responsive dashboard that updates in real time, enabling faster customer-experience decisions on the go.</p>
+              </div>
+            </div>
+            <a href="https://play.google.com/store/apps/details?id=com.sentimeterNode" target="_blank" rel="noopener" class="case-link">View on Google Play →</a>
+          </div>
+        </article>
+
+        <article class="case-study reveal">
+          <div class="case-number">02</div>
+          <div class="case-content">
+            <span class="case-tag">Real Estate · Flutter · REST API</span>
+            <h3>MLS Connect — Live Property Data at Scale</h3>
+            <p class="case-intro">A real estate platform connecting agents, buyers, and property listings with live MLS data sync and map-based search.</p>
+            <div class="case-gallery">
+              <img src="images/mls-1.png" alt="MLS Connect property listings" loading="lazy" />
+              <img src="images/mls-2.png" alt="MLS Connect search and filters" loading="lazy" />
+              <img src="images/mls-3.png" alt="MLS Connect property details" loading="lazy" />
+            </div>
+            <div class="case-details">
+              <div class="case-block">
+                <h4>Challenge</h4>
+                <p>Handle large property datasets with fast search, map browsing, and offline-friendly caching while integrating a custom REST API backend.</p>
+              </div>
+              <div class="case-block">
+                <h4>Solution</h4>
+                <ul>
+                  <li>Bloc state management for predictable data flows</li>
+                  <li>Paginated API calls with local caching for instant loads</li>
+                  <li>Google Maps integration with geolocation and property markers</li>
+                  <li>Modular architecture ready for future platform expansion</li>
+                </ul>
+              </div>
+              <div class="case-block">
+                <h4>Outcome</h4>
+                <p>Published on Google Play with smooth browsing under heavy data loads and a maintainable codebase for ongoing feature delivery.</p>
+              </div>
+            </div>
+            <a href="https://play.google.com/store/apps/details?id=com.immosquare.mls.connect" target="_blank" rel="noopener" class="case-link">View on Google Play →</a>
+          </div>
+        </article>
+
+        <article class="case-study reveal">
+          <div class="case-number">03</div>
+          <div class="case-content">
+            <span class="case-tag">Health · Flutter · Firebase</span>
+            <h3>Core Direction — Personalized Wellness Tracking</h3>
+            <p class="case-intro">A health and wellness app with personalized fitness tracking, goal setting, and engagement features for iOS users.</p>
+            <div class="case-gallery">
+              <img src="images/core-direction-1.webp" alt="Core Direction screen 1" loading="lazy" />
+              <img src="images/core-direction-3.webp" alt="Core Direction screen 3" loading="lazy" />
+              <img src="images/core-direction-5.webp" alt="Core Direction screen 5" loading="lazy" />
+              <img src="images/core-direction-7.webp" alt="Core Direction screen 7" loading="lazy" />
+            </div>
+            <div class="case-details">
+              <div class="case-block">
+                <h4>Challenge</h4>
+                <p>Deliver a polished iOS experience with personalized health journeys, progress tracking, and reliable sync across user sessions.</p>
+              </div>
+              <div class="case-block">
+                <h4>Solution</h4>
+                <ul>
+                  <li>Flutter UI tuned for iOS design patterns and smooth animations</li>
+                  <li>Firebase backend for user profiles, goals, and activity data</li>
+                  <li>Reusable widget library for consistent wellness dashboards</li>
+                  <li>Performance tuning for image-heavy health content screens</li>
+                </ul>
+              </div>
+              <div class="case-block">
+                <h4>Outcome</h4>
+                <p>Shipped on the App Store with a cohesive wellness experience and a scalable foundation for new health features.</p>
+              </div>
+            </div>
+            <a href="https://apps.apple.com/ae/app/core-direction/id1644608047" target="_blank" rel="noopener" class="case-link">View on App Store →</a>
+          </div>
+        </article>
+
+        <article class="case-study reveal">
+          <div class="case-number">04</div>
+          <div class="case-content">
+            <span class="case-tag">Education · Flutter · Video LMS</span>
+            <h3>edX — Courses by Harvard & MIT</h3>
+            <p class="case-intro">A world-class online learning platform with course browsing, video playback, enrollment, and progress tracking at global scale.</p>
+            <div class="case-gallery">
+              <img src="images/edX-1.jpg" alt="edX course catalog" loading="lazy" />
+              <img src="images/edX-3.jpg" alt="edX video learning" loading="lazy" />
+              <img src="images/edX-5.jpg" alt="edX course browse" loading="lazy" />
+              <img src="images/edX-7.jpg" alt="edX course enrollment" loading="lazy" />
+            </div>
+            <div class="case-details">
+              <div class="case-block">
+                <h4>Challenge</h4>
+                <p>Support a massive course catalog with reliable video streaming, offline-friendly browsing, and a seamless enrollment flow on Android.</p>
+              </div>
+              <div class="case-block">
+                <h4>Solution</h4>
+                <ul>
+                  <li>Optimized list rendering for thousands of courses</li>
+                  <li>Integrated video player with progress persistence</li>
+                  <li>Deep linking into course detail and enrollment flows</li>
+                  <li>Clean separation of UI, domain, and API layers</li>
+                </ul>
+              </div>
+              <div class="case-block">
+                <h4>Outcome</h4>
+                <p>Production app on Google Play serving millions of learners with a stable, high-performance Flutter experience.</p>
+              </div>
+            </div>
+            <a href="https://play.google.com/store/apps/details?id=org.edx.mobile" target="_blank" rel="noopener" class="case-link">View on Google Play →</a>
+          </div>
+        </article>
+
+        <article class="case-study reveal">
+          <div class="case-number">05</div>
+          <div class="case-content">
+            <span class="case-tag">Education · Flutter · Kids UX</span>
+            <h3>Goally — Learning Apps for Kids</h3>
+            <p class="case-intro">Interactive learning routines, rewards, and parent-guided developmental tools designed for young learners.</p>
+            <div class="case-gallery">
+              <img src="images/goally-1.png" alt="Goally learning screen 1" loading="lazy" />
+              <img src="images/goally-3.png" alt="Goally learning screen 3" loading="lazy" />
+              <img src="images/goally-5.png" alt="Goally learning screen 5" loading="lazy" />
+              <img src="images/goally-8.png" alt="Goally learning screen 8" loading="lazy" />
+            </div>
+            <div class="case-details">
+              <div class="case-block">
+                <h4>Challenge</h4>
+                <p>Create an engaging, child-friendly interface with routines, rewards, and parent controls — all while keeping performance smooth on lower-end devices.</p>
+              </div>
+              <div class="case-block">
+                <h4>Solution</h4>
+                <ul>
+                  <li>Playful UI with accessible typography and touch targets</li>
+                  <li>Gamified reward flows to sustain learner engagement</li>
+                  <li>Firebase-backed sync for routines and parent settings</li>
+                  <li>Animation and asset optimization for fluid interactions</li>
+                </ul>
+              </div>
+              <div class="case-block">
+                <h4>Outcome</h4>
+                <p>Published on Google Play as a polished kids learning app with strong retention through routine-based engagement.</p>
+              </div>
+            </div>
+            <a href="https://play.google.com/store/apps/details?id=com.getgoally.learnerapp" target="_blank" rel="noopener" class="case-link">View on Google Play →</a>
+          </div>
+        </article>
+
+        <article class="case-study reveal">
+          <div class="case-number">06</div>
+          <div class="case-content">
+            <span class="case-tag">Food Delivery · Flutter · Firebase</span>
+            <h3>Flyereats — Merchant Order Management</h3>
+            <p class="case-intro">A food delivery merchant app for restaurants to manage orders, menus, and deliveries in real time.</p>
+            <div class="case-gallery">
+              <img src="images/flyereats-1.jpg" alt="Flyereats merchant screen 1" loading="lazy" />
+              <img src="images/flyereats-3.jpg" alt="Flyereats merchant screen 3" loading="lazy" />
+              <img src="images/flyereats-5.jpg" alt="Flyereats merchant screen 5" loading="lazy" />
+            </div>
+            <div class="case-details">
+              <div class="case-block">
+                <h4>Challenge</h4>
+                <p>Give restaurant partners a reliable tool to accept orders, update menus, and track deliveries during peak hours without lag or missed updates.</p>
+              </div>
+              <div class="case-block">
+                <h4>Solution</h4>
+                <ul>
+                  <li>Real-time order inbox with Firebase push updates</li>
+                  <li>Menu management with instant sync to the consumer platform</li>
+                  <li>Status workflows for prep, pickup, and delivery stages</li>
+                  <li>Optimized layouts for fast one-handed merchant use</li>
+                </ul>
+              </div>
+              <div class="case-block">
+                <h4>Outcome</h4>
+                <p>Live on Google Play, helping merchants handle high-volume order flows with fewer missed or delayed orders.</p>
+              </div>
+            </div>
+            <a href="https://play.google.com/store/apps/details?id=in.flyereats.merchants" target="_blank" rel="noopener" class="case-link">View on Google Play →</a>
+          </div>
+        </article>
+
+        <article class="case-study reveal">
+          <div class="case-number">07</div>
+          <div class="case-content">
+            <span class="case-tag">Food Delivery · Flutter · Multi-app</span>
+            <h3>Daadi's Kitchen — Three-App Delivery Ecosystem</h3>
+            <p class="case-intro">A complete food delivery platform with separate User, Driver, and Manager apps — each tailored to its role in the order lifecycle.</p>
+            <div class="case-gallery">
+              <img src="images/daadiskitchen-user-1.png" alt="Daadi's Kitchen User app" loading="lazy" />
+              <img src="images/daadiskitchen-driver-1.png" alt="Daadi's Kitchen Driver app" loading="lazy" />
+              <img src="images/daadiskitchen-manager-1.png" alt="Daadi's Kitchen Manager app" loading="lazy" />
+            </div>
+            <div class="case-details">
+              <div class="case-block">
+                <h4>Challenge</h4>
+                <p>Build three interconnected apps — customer ordering, driver dispatch, and restaurant management — with shared business logic and consistent real-time order state.</p>
+              </div>
+              <div class="case-block">
+                <h4>Solution</h4>
+                <ul>
+                  <li>Shared Flutter core package for models, APIs, and utilities</li>
+                  <li>Role-specific UIs for users, drivers, and managers</li>
+                  <li>Firebase for live order tracking and notifications</li>
+                  <li>Independent Play Store releases per app with unified backend</li>
+                </ul>
+              </div>
+              <div class="case-block">
+                <h4>Outcome</h4>
+                <p>All three apps published on Google Play, forming a production-ready delivery ecosystem from order placement to fulfillment.</p>
+              </div>
+            </div>
+            <div class="case-links">
+              <a href="https://play.google.com/store/apps/details?id=com.daadiskitchen.daadiskitchenUser" target="_blank" rel="noopener" class="case-link">User App →</a>
+              <a href="https://play.google.com/store/apps/details?id=com.daadiskitchen.daadiskitchenDriver" target="_blank" rel="noopener" class="case-link">Driver App →</a>
+              <a href="https://play.google.com/store/apps/details?id=com.daadiskitchen.daadiskitchenManager" target="_blank" rel="noopener" class="case-link">Manager App →</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="case-study reveal">
+          <div class="case-number">08</div>
+          <div class="case-content">
+            <span class="case-tag">eCommerce · Flutter · iOS</span>
+            <h3>Salt — Mobile Shopping Experience</h3>
+            <p class="case-intro">An eCommerce mobile application with product browsing, cart management, and a streamlined checkout flow.</p>
+            <div class="case-gallery">
+              <img src="images/salt-1.webp" alt="Salt eCommerce screen 1" loading="lazy" />
+              <img src="images/salt-2.webp" alt="Salt eCommerce screen 2" loading="lazy" />
+              <img src="images/salt-3.webp" alt="Salt eCommerce screen 3" loading="lazy" />
+            </div>
+            <div class="case-details">
+              <div class="case-block">
+                <h4>Challenge</h4>
+                <p>Deliver a premium iOS shopping experience with fast catalog browsing, secure payments, and polished product detail pages.</p>
+              </div>
+              <div class="case-block">
+                <h4>Solution</h4>
+                <ul>
+                  <li>Flutter UI aligned with iOS commerce design patterns</li>
+                  <li>Cart and checkout flows with persistent session state</li>
+                  <li>Image caching and lazy loading for product catalogs</li>
+                  <li>Payment integration with error handling and retry flows</li>
+                </ul>
+              </div>
+              <div class="case-block">
+                <h4>Outcome</h4>
+                <p>Launched on the App Store with a smooth end-to-end purchase journey and a codebase ready for catalog expansion.</p>
+              </div>
+            </div>
+            <a href="https://apps.apple.com/us/app/salt-qa/id6502684288" target="_blank" rel="noopener" class="case-link">View on App Store →</a>
+          </div>
+        </article>
+
+        <article class="case-study reveal">
+          <div class="case-number">09</div>
+          <div class="case-content">
+            <span class="case-tag">Mobile App · Flutter · iOS</span>
+            <h3>Ktha — Modern iOS Application</h3>
+            <p class="case-intro">A production mobile application with modern UI, seamless navigation, and a refined user experience on iOS.</p>
+            <div class="case-gallery">
+              <img src="images/ktha-1.webp" alt="Ktha screen 1" loading="lazy" />
+              <img src="images/ktha-3.webp" alt="Ktha screen 3" loading="lazy" />
+              <img src="images/ktha-5.webp" alt="Ktha screen 5" loading="lazy" />
+            </div>
+            <div class="case-details">
+              <div class="case-block">
+                <h4>Challenge</h4>
+                <p>Ship a polished iOS app with custom UI, smooth transitions, and reliable API integration within a tight launch timeline.</p>
+              </div>
+              <div class="case-block">
+                <h4>Solution</h4>
+                <ul>
+                  <li>Custom Flutter widgets matching brand design language</li>
+                  <li>Declarative navigation with deep-link support</li>
+                  <li>REST API layer with robust error and loading states</li>
+                  <li>iOS-specific polish for typography, spacing, and gestures</li>
+                </ul>
+              </div>
+              <div class="case-block">
+                <h4>Outcome</h4>
+                <p>Successfully published on the App Store with a cohesive visual identity and stable performance in production.</p>
+              </div>
+            </div>
+            <a href="https://apps.apple.com/us/app/ktha/id6670529315" target="_blank" rel="noopener" class="case-link">View on App Store →</a>
+          </div>
+        </article>
+
+        <article class="case-study reveal">
+          <div class="case-number">10</div>
+          <div class="case-content">
+            <span class="case-tag">Rehab & Wellness · Flutter · iOS</span>
+            <h3>Rehab App — Cognitive Wellness & Recovery</h3>
+            <p class="case-intro">A rehabilitation and cognitive wellness app with guided exercises, progress tracking, and engaging recovery activities.</p>
+            <div class="case-gallery">
+              <img src="images/rehab-1.webp" alt="Rehab App screen 1" loading="lazy" />
+              <img src="images/rehab-4.webp" alt="Rehab App screen 4" loading="lazy" />
+              <img src="images/rehab-7.webp" alt="Rehab App screen 7" loading="lazy" />
+              <img src="images/rehab-10.webp" alt="Rehab App screen 10" loading="lazy" />
+            </div>
+            <div class="case-details">
+              <div class="case-block">
+                <h4>Challenge</h4>
+                <p>Build an accessible health app with guided rehab exercises, progress visualization, and motivating UX for users on a recovery journey.</p>
+              </div>
+              <div class="case-block">
+                <h4>Solution</h4>
+                <ul>
+                  <li>Structured exercise flows with step-by-step guidance</li>
+                  <li>Progress dashboards tracking completion and milestones</li>
+                  <li>Accessible UI with clear typography and touch targets</li>
+                  <li>Game-inspired interactions to sustain user motivation</li>
+                </ul>
+              </div>
+              <div class="case-block">
+                <h4>Outcome</h4>
+                <p>Released on the App Store as Plasticity Game, delivering an engaging rehab experience with measurable progress tracking.</p>
+              </div>
+            </div>
+            <a href="https://apps.apple.com/us/app/plasticity-game/id6758449741" target="_blank" rel="noopener" class="case-link">View on App Store →</a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section id="testimonials" class="section">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Work History</span>
+        <h2>Completed & in-progress projects</h2>
+        <p class="section-desc">Upwork work history — click any project to see full review details.</p>
+      </div>
+
+      <div class="testimonials-summary reveal">
+        <div class="summary-stat">
+          <span class="summary-num">5.0</span>
+          <span class="summary-label">Average Rating</span>
+        </div>
+        <div class="summary-stat">
+          <span class="summary-num" id="summaryReviewCount">—</span>
+          <span class="summary-label">Written Reviews</span>
+        </div>
+        <div class="summary-stat">
+          <span class="summary-stars" aria-label="5 out of 5 stars">★★★★★</span>
+          <span class="summary-label">All 5-Star Reviews</span>
+        </div>
+      </div>
+
+      <div class="work-history-tabs reveal" role="tablist" aria-label="Work history">
+        <button type="button" class="work-tab active" id="tabCompleted" role="tab" aria-selected="true">
+          Completed jobs (<span id="countCompleted">0</span>)
+        </button>
+        <button type="button" class="work-tab" id="tabInProgress" role="tab" aria-selected="false">
+          In progress (<span id="countInProgress">0</span>)
+        </button>
+      </div>
+
+      <div class="reviews-list" id="reviewsList" aria-label="Work history projects"></div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" class="section section-alt">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Expertise</span>
+        <h2>Flutter & Firebase stack</h2>
+      </div>
+      <div class="skills-grid reveal">
+        <div class="skill-group">
+          <h3>Development</h3>
+          <ul>
+            <li>Flutter (iOS, Android, Web)</li>
+            <li>Dart & Clean Architecture</li>
+            <li>Bloc, Riverpod, Provider, GetX</li>
+            <li>Responsive UI & Animations</li>
+            <li>Performance Optimization</li>
+          </ul>
+        </div>
+        <div class="skill-group">
+          <h3>Backend & APIs</h3>
+          <ul>
+            <li>Firebase (Auth, Firestore, FCM)</li>
+            <li>Cloud Functions</li>
+            <li>REST API Integration</li>
+            <li>Real-time Chat & Live Sync</li>
+            <li>Custom Backend Systems</li>
+          </ul>
+        </div>
+        <div class="skill-group">
+          <h3>Integrations</h3>
+          <ul>
+            <li>Stripe (Payments & Subscriptions)</li>
+            <li>Google Maps & Geolocation</li>
+            <li>Push Notifications (FCM)</li>
+            <li>Social Logins</li>
+            <li>In-App Purchases</li>
+          </ul>
+        </div>
+        <div class="skill-group">
+          <h3>Delivery</h3>
+          <ul>
+            <li>App Store Deployment</li>
+            <li>Google Play Deployment</li>
+            <li>CI/CD & Code Review</li>
+            <li>Ongoing Support & Scaling</li>
+            <li>Clear Communication</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience -->
+  <section id="experience" class="section">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Experience</span>
+        <h2>Professional journey</h2>
+      </div>
+      <div class="timeline reveal">
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <span class="timeline-date">July 2023 – Present</span>
+            <h3>Flutter App Developer — Freelance</h3>
+            <p>End-to-end Flutter development for startups and businesses. MVPs, feature enhancements, performance optimization, Firebase backends, and App Store / Play Store deployments.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <span class="timeline-date">April 2018 – June 2023</span>
+            <h3>Android + Flutter Developer — Innvente</h3>
+            <p>Built and maintained production Android & Flutter apps with modern UI, REST API integrations, and Firebase services for multiple client projects.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <span class="timeline-date">Oct 2017 – April 2018</span>
+            <h3>Android Developer — GrayStork</h3>
+            <p>Complete Android app lifecycle including design, enhancements, bug fixing, and Play Store publishing.</p>
+          </div>
+        </div>
+      </div>
+      <div class="education reveal">
+        <h3>Education</h3>
+        <p><strong>Bachelor of Software Engineering</strong> — APCOMS (Affiliated with UET) · CGPA 3.58 / 4.00</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Hire Me -->
+  <section id="why-me" class="section">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Why Hire Me</span>
+        <h2>What you get when we work together</h2>
+      </div>
+      <div class="benefits-grid reveal">
+        <div class="benefit">
+          <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+          <span>Scalable Flutter app with clean architecture</span>
+        </div>
+        <div class="benefit">
+          <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+          <span>Fast MVP delivery for startups</span>
+        </div>
+        <div class="benefit">
+          <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+          <span>Secure, optimized Firebase backend</span>
+        </div>
+        <div class="benefit">
+          <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+          <span>Modern UI/UX with smooth animations</span>
+        </div>
+        <div class="benefit">
+          <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+          <span>Maintainable, production-ready codebase</span>
+        </div>
+        <div class="benefit">
+          <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+          <span>Ongoing support and feature scaling</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="section section-contact">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-info reveal">
+          <span class="section-tag">Contact</span>
+          <h2>Let's build your next app</h2>
+          <p>Have a project in mind? Send me a message and I'll get back to you within 24 hours.</p>
+
+          <div class="contact-details">
+            <a href="mailto:fksedev@gmail.com" class="contact-item">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              fksedev@gmail.com
+            </a>
+            <a href="tel:+923165889996" class="contact-item">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+              +92 316 588 9996
+            </a>
+          </div>
+
+          <div class="social-links">
+            <a href="https://github.com/fksedev" target="_blank" rel="noopener" class="social-btn" aria-label="GitHub">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.395-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+            </a>
+            <a href="https://www.linkedin.com/in/faizan-khaliq-068031130" target="_blank" rel="noopener" class="social-btn" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 114.126 0 2.063 2.063 0 01-2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </a>
+            <a href="https://www.upwork.com/freelancers/~0139bf00dbe34dcc1f" target="_blank" rel="noopener" class="social-btn social-upwork" aria-label="Upwork">
+              <span>Up</span>
+            </a>
+            <a href="https://www.freelancer.com/u/fksedevops" target="_blank" rel="noopener" class="social-btn social-freelancer" aria-label="Freelancer">
+              <span>F</span>
+            </a>
+          </div>
+        </div>
+
+        <form class="contact-form reveal" id="contactForm" action="https://formsubmit.co/fksedev@gmail.com" method="POST">
+          <input type="hidden" name="_subject" value="New Portfolio Inquiry — Faizan Khaliq" />
+          <input type="hidden" name="_captcha" value="false" />
+          <input type="hidden" name="_template" value="table" />
+          <input type="text" name="_honey" style="display:none" />
+
+          <div class="form-group">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" placeholder="John Doe" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="john@company.com" required />
+          </div>
+          <div class="form-group">
+            <label for="project">Project Type</label>
+            <select id="project" name="project" required>
+              <option value="" disabled selected>Select a project type</option>
+              <option value="MVP / Startup App">MVP / Startup App</option>
+              <option value="Marketplace App">Marketplace App</option>
+              <option value="SaaS / Subscription App">SaaS / Subscription App</option>
+              <option value="On-Demand App">On-Demand App</option>
+              <option value="Social / Community App">Social / Community App</option>
+              <option value="Feature Enhancement">Feature Enhancement</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="budget">Estimated Budget</label>
+            <select id="budget" name="budget">
+              <option value="" disabled selected>Select budget range</option>
+              <option value="Under $1,000">Under $1,000</option>
+              <option value="$1,000 – $5,000">$1,000 – $5,000</option>
+              <option value="$5,000 – $15,000">$5,000 – $15,000</option>
+              <option value="$15,000+">$15,000+</option>
+              <option value="Not sure yet">Not sure yet</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Project Details</label>
+            <textarea id="message" name="message" rows="5" placeholder="Tell me about your app idea, timeline, and goals..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full" id="submitBtn">
+            <span class="btn-text">Send Message</span>
+            <span class="btn-loading" hidden>Sending...</span>
+          </button>
+          <p class="form-note">Or email me directly at <a href="mailto:fksedev@gmail.com">fksedev@gmail.com</a></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>© 2026 Faizan Khaliq — Senior Flutter Developer</p>
+      <p class="footer-tagline">Built with Flutter expertise, deployed with care.</p>
+    </div>
+  </footer>
+
+  <!-- Review detail modal -->
+  <div class="review-modal" id="reviewModal" hidden aria-modal="true" role="dialog" aria-labelledby="reviewModalTitle">
+    <div class="review-modal-backdrop" data-review-close></div>
+    <div class="review-modal-dialog">
+      <button type="button" class="review-modal-x" data-review-close aria-label="Close">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+      </button>
+      <header class="review-modal-header">
+        <h2 id="reviewModalTitle"></h2>
+        <div class="review-modal-header-meta">
+          <span id="reviewModalDates" class="review-modal-dates"></span>
+          <div id="reviewModalEarned" class="review-modal-earned"></div>
+        </div>
+      </header>
+      <div class="review-modal-body" id="reviewModalBody"></div>
+      <footer class="review-modal-footer">
+        <button type="button" class="btn btn-primary" data-review-close>Close</button>
+      </footer>
+    </div>
   </div>
-</header>
 
-<section id="about">
-  <h2>About Me</h2>
-  <p>
-    Flutter Developer with <strong>7+ years of experience</strong> building scalable,
-    high-performance mobile applications for Android, iOS, and Web.
-    Specialized in full product lifecycle development, modern UI/UX,
-    Firebase services, REST APIs, and clean architecture.
-  </p>
-</section>
-
-<section id="skills">
-  <h2>Tech Stack</h2>
-  <div class="grid">
-    <div class="card">Flutter & Dart</div>
-    <div class="card">Android & iOS</div>
-    <div class="card">Flutter Web</div>
-    <div class="card">Bloc / Provider / Riverpod</div>
-    <div class="card">Firebase Services</div>
-    <div class="card">REST APIs</div>
-    <div class="card">Google Maps & Location</div>
-    <div class="card">Payments & In-App Purchases</div>
+  <!-- Image lightbox -->
+  <div class="lightbox" id="lightbox" hidden aria-modal="true" role="dialog" aria-label="Screenshot preview">
+    <div class="lightbox-backdrop" data-lightbox-close></div>
+    <button type="button" class="lightbox-close" data-lightbox-close aria-label="Close preview">
+      <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+    </button>
+    <button type="button" class="lightbox-nav lightbox-prev" id="lightboxPrev" aria-label="Previous image">
+      <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+    </button>
+    <button type="button" class="lightbox-nav lightbox-next" id="lightboxNext" aria-label="Next image">
+      <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+    </button>
+    <div class="lightbox-stage">
+      <img class="lightbox-image" id="lightboxImage" src="" alt="" />
+    </div>
+    <p class="lightbox-counter" id="lightboxCounter" aria-live="polite"></p>
   </div>
-</section>
 
-<section id="experience">
-  <h2>Experience</h2>
-  <div class="timeline">
-    <div class="item">
-      <h3>Flutter App Developer — Freelancer</h3>
-      <span>July 2023 – Present</span>
-      <p>End-to-end Flutter development, feature enhancements, performance optimization and maintenance.</p>
-    </div>
-    <div class="item">
-      <h3>Android + Flutter Developer — Innvente</h3>
-      <span>April 2018 – June 2023</span>
-      <p>Built and maintained production Android & Flutter apps with modern UI and backend integrations.</p>
-    </div>
-    <div class="item">
-      <h3>Android Developer — GrayStork</h3>
-      <span>Oct 2017 – April 2018</span>
-      <p>Complete Android app lifecycle including design, enhancements, and bug fixing.</p>
-    </div>
-  </div>
-</section>
-
-<section id="projects">
-  <h2>Production Apps & Projects</h2>
-  <div class="projects-grid">
-    <div class="project-card">
-      <img src="images/sentimeter.jpg" alt="Sentimeter Node">
-      <h3>Sentimeter Node</h3>
-      <p>Feedback & Analytics Platform</p>
-      <a href="https://play.google.com/store/apps/details?id=com.sentimeterNode" target="_blank">Google Play</a>
-    </div>
-    <div class="project-card">
-      <img src="images/mls.jpg" alt="MLS Connect">
-      <h3>MLS Connect</h3>
-      <p>Real Estate Platform</p>
-      <a href="https://play.google.com/store/apps/details?id=com.immosquare.mls.connect" target="_blank">Google Play</a>
-    </div>
-    <div class="project-card">
-      <img src="images/core-direction.jpg" alt="Core Direction">
-      <h3>Core Direction</h3>
-      <p>Health & Wellness App</p>
-      <a href="https://apps.apple.com/ae/app/core-direction/id1644608047" target="_blank">App Store</a>
-    </div>
-  </div>
-</section>
-
-<section id="education">
-  <h2>Education</h2>
-  <p>
-    <strong>Bachelor of Software Engineering</strong><br/>
-    APCOMS (Affiliated with UET)<br/>
-    CGPA: 3.58 / 4.00
-  </p>
-</section>
-
-<section id="contact">
-  <h2>Contact & Online Profiles</h2>
-  <p><strong>Email:</strong> <a href="mailto:faizankhaliq0099@gmail.com">faizankhaliq0099@gmail.com</a></p>
-  <p><strong>Phone:</strong> +92 316 588 9996</p>
-
-  <div class="profile-links">
-    <a href="https://github.com/fksedev" target="_blank" class="profile-btn github">GitHub</a>
-    <a href="https://www.upwork.com/freelancers/~0139bf00dbe34dcc1f" target="_blank" class="profile-btn upwork">Upwork</a>
-    <a href="https://www.freelancer.com/u/fksedevops" target="_blank" class="profile-btn freelancer">Freelancer</a>
-    <a href="#" target="_blank" class="profile-btn linkedin">LinkedIn</a>
-  </div>
-</section>
-
-<footer>
-  <p>© 2026 Faizan Khaliq — Flutter Developer</p>
-</footer>
-
+  <script src="reviews.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>

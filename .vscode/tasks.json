@@ -1,0 +1,53 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Prepare portfolio debug",
+      "type": "shell",
+      "command": "${workspaceFolder}/.vscode/prepare-debug.sh",
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "silent",
+        "panel": "shared",
+        "close": true
+      }
+    },
+    {
+      "label": "Kill stale debug Chrome",
+      "type": "shell",
+      "command": "pkill -f 'ms-vscode.js-debug/.profile' 2>/dev/null || true; pkill -f 'chrome-debug-profile' 2>/dev/null || true; echo 'Closed stale debug Chrome sessions'",
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared"
+      }
+    },
+    {
+      "label": "Start local server (port 8080)",
+      "type": "shell",
+      "command": "if curl -sf --max-time 2 http://127.0.0.1:8080/ >/dev/null 2>&1; then echo 'Server already running on http://localhost:8080'; else lsof -ti :8080 | xargs kill -9 2>/dev/null; python3 -m http.server 8080 & sleep 1; echo 'Started server on http://localhost:8080'; fi",
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "silent",
+        "panel": "shared",
+        "close": true
+      }
+    },
+    {
+      "label": "Stop local server (port 8080)",
+      "type": "shell",
+      "command": "lsof -ti :8080 | xargs kill -9 2>/dev/null; echo 'Stopped any process on port 8080'",
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared"
+      }
+    }
+  ]
+}

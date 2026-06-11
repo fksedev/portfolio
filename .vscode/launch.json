@@ -1,0 +1,33 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "pwa-chrome",
+      "request": "launch",
+      "name": "Launch Portfolio (server + Chrome)",
+      "url": "http://localhost:8080",
+      "webRoot": "${workspaceFolder}",
+      "runtimeExecutable": "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
+      "userDataDir": "${workspaceFolder}/.vscode/chrome-debug-profile",
+      "preLaunchTask": "Prepare portfolio debug"
+    },
+    {
+      "type": "pwa-chrome",
+      "request": "launch",
+      "name": "Launch Chrome only (no server task)",
+      "url": "http://localhost:8080",
+      "webRoot": "${workspaceFolder}",
+      "runtimeExecutable": "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
+      "userDataDir": "${workspaceFolder}/.vscode/chrome-debug-profile",
+      "preLaunchTask": "Kill stale debug Chrome"
+    },
+    {
+      "type": "pwa-chrome",
+      "request": "attach",
+      "name": "Attach to Chrome (port 9222)",
+      "port": 9222,
+      "webRoot": "${workspaceFolder}",
+      "urlFilter": "http://localhost:8080/*"
+    }
+  ]
+}
