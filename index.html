@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css?v=4" />
+  <link rel="stylesheet" href="style.css?v=6" />
 </head>
 <body>
 
@@ -945,8 +945,8 @@
     <div class="container">
       <div class="section-header reveal">
         <span class="section-tag">Work History</span>
-        <h2>Completed & in-progress projects</h2>
-        <p class="section-desc">Upwork work history — click any project to see full review details.</p>
+        <h2>Happy clients & their feedback</h2>
+        <p class="section-desc">Real Upwork reviews from satisfied clients — click any feedback to see the full story.</p>
       </div>
 
       <div class="testimonials-summary reveal">
@@ -955,8 +955,8 @@
           <span class="summary-label">Average Rating</span>
         </div>
         <div class="summary-stat">
-          <span class="summary-num" id="summaryReviewCount">—</span>
-          <span class="summary-label">Written Reviews</span>
+          <span class="summary-num" id="summaryHappyClients">—</span>
+          <span class="summary-label">Happy Clients</span>
         </div>
         <div class="summary-stat">
           <span class="summary-stars" aria-label="5 out of 5 stars">★★★★★</span>
@@ -964,16 +964,7 @@
         </div>
       </div>
 
-      <div class="work-history-tabs reveal" role="tablist" aria-label="Work history">
-        <button type="button" class="work-tab active" id="tabCompleted" role="tab" aria-selected="true">
-          Completed jobs (<span id="countCompleted">0</span>)
-        </button>
-        <button type="button" class="work-tab" id="tabInProgress" role="tab" aria-selected="false">
-          In progress (<span id="countInProgress">0</span>)
-        </button>
-      </div>
-
-      <div class="reviews-list" id="reviewsList" aria-label="Work history projects"></div>
+      <div class="reviews-list" id="reviewsList" aria-label="Client feedback"></div>
     </div>
   </section>
 
@@ -1216,7 +1207,6 @@
         <h2 id="reviewModalTitle"></h2>
         <div class="review-modal-header-meta">
           <span id="reviewModalDates" class="review-modal-dates"></span>
-          <div id="reviewModalEarned" class="review-modal-earned"></div>
         </div>
       </header>
       <div class="review-modal-body" id="reviewModalBody"></div>
@@ -1244,7 +1234,7 @@
     <p class="lightbox-counter" id="lightboxCounter" aria-live="polite"></p>
   </div>
 
-  <script src="reviews.js?v=2"></script>
+  <script src="reviews.js?v=7"></script>
   <script src="script.js?v=4"></script>
 </body>
 </html>

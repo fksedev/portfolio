@@ -1,4 +1,4 @@
-/* Upwork work history — completed & in-progress projects */
+/* Upwork client feedback — happy & satisfied customers */
 const PROJECTS = [
   // ─── Completed ───────────────────────────────────────────────
   {
@@ -551,71 +551,20 @@ function truncate(text, max = 140) {
   return text.slice(0, max).trim() + '…';
 }
 
-function formatEarned(project) {
-  let html = '';
-  if (project.hours) html += `<span>${project.hours}</span>`;
-  if (project.rate) html += `<span>${project.rate}</span>`;
-  if (project.earned) {
-    const label = project.status === 'in_progress' ? 'earned to date' : 'earned';
-    html += `<strong>${project.earned} ${label}</strong>`;
-  } else if (project.budget) {
-    html += `<strong>${project.budget} budget</strong>`;
-  }
-  html += `<span class="review-meta-type">${project.jobType}</span>`;
-  return html;
-}
-
-function getPreviewText(project) {
-  if (project.status === 'in_progress') {
-    if (project.clientReview?.text) return truncate(project.clientReview.text);
-    if (project.jobDescription) return truncate(project.jobDescription, 120);
-    if (project.jobPrivate) return 'Job in progress — private job';
-    return 'Job in progress';
-  }
-  if (project.noFeedback) return 'No feedback given';
-  if (project.clientReview?.text) return truncate(project.clientReview.text);
-  if (project.clientReview?.rating) return 'Rating only — no written feedback';
-  return 'Click to view project details';
-}
-
 function buildReviewListItem(project) {
-  const rating = project.clientReview?.rating;
-  const preview = getPreviewText(project);
-  const tags = (project.endorsements || [])
-    .slice(0, 3)
-    .map(t => `<span class="review-tag">${t}</span>`)
-    .join('');
-
-  const ratingHtml = rating
-    ? `<div class="review-item-rating">
-        <span class="review-stars" aria-label="${rating} out of 5">${renderStars(rating)}</span>
-        <span class="review-rating-num">${rating.toFixed(1)}</span>
-      </div>`
-    : '';
-
-  const inProgressBadge = project.status === 'in_progress'
-    ? '<span class="review-status-badge">Job in progress</span>'
-    : '';
-
-  const earnedLabel = project.earned || project.budget || '';
-  const isQuote = !project.noFeedback && project.status !== 'in_progress' || project.clientReview?.text;
-  const previewClass = (project.noFeedback || (project.status === 'in_progress' && !project.clientReview?.text))
-    ? 'review-item-preview-muted' : '';
+  const rating = project.clientReview?.rating || 5;
+  const preview = truncate(project.clientReview.text);
 
   return `
-    <button type="button" class="review-item reveal ${project.status === 'in_progress' ? 'review-item-active' : ''}" data-review-id="${project.id}">
-      <div class="review-item-top">
-        <h3 class="review-item-title">${project.title}</h3>
-        ${inProgressBadge}
-        ${ratingHtml}
+    <button type="button" class="review-item reveal" data-review-id="${project.id}">
+      <h3 class="review-item-title">${project.title}</h3>
+      <blockquote class="review-item-quote">"${preview}"</blockquote>
+      <div class="review-item-rating">
+        <span class="review-stars" aria-label="${rating} out of 5">${renderStars(rating)}</span>
+        <span class="review-rating-num">${rating.toFixed(1)}</span>
       </div>
-      <div class="review-item-meta">
-        <span class="review-item-dates">${project.dateStart} – ${project.dateEnd}</span>
-        <span class="review-item-earned">${earnedLabel}</span>
-      </div>
-      <p class="review-item-preview ${previewClass}">${isQuote && project.clientReview?.text ? `"${preview}"` : preview}</p>
-      ${tags ? `<div class="review-item-tags">${tags}</div>` : ''}
-      <span class="review-item-cta">View details →</span>
+      <span class="review-item-dates">${project.dateStart} – ${project.dateEnd}</span>
+      <span class="review-item-cta">View project →</span>
     </button>
   `;
 }
@@ -623,83 +572,30 @@ function buildReviewListItem(project) {
 function buildModalContent(project) {
   let html = '';
 
-  if (project.status === 'in_progress') {
-    html += `<section class="review-modal-section review-modal-status">
-      <span class="review-status-badge review-status-badge-lg">Job in progress</span>
-    </section>`;
+  html += `<section class="review-modal-section review-modal-job">
+    <h4>Project details</h4>`;
+  if (project.jobDescription) {
+    html += `<p>${project.jobDescription}</p>`;
+  } else if (project.jobPrivate) {
+    html += '<p class="review-job-private">Private project</p>';
+  } else {
+    html += `<p>${project.title}</p>`;
   }
+  if (project.jobType) {
+    html += `<p class="review-job-detail">${project.jobType}</p>`;
+  }
+  html += `</section>`;
 
-  const hasClientReview = project.clientReview?.text || (project.clientReview?.rating && project.status === 'completed');
-  if (hasClientReview || (project.status === 'completed' && !project.noFeedback)) {
+  if (project.clientReview?.text) {
     html += `<section class="review-modal-section">
-      <h4>Client's review</h4>`;
-
-    if (project.noFeedback || !project.clientReview?.text) {
-      if (project.clientReview?.rating) {
-        html += `<div class="review-modal-rating">
-          <span class="review-stars review-stars-lg">${renderStars(project.clientReview.rating)}</span>
-          <span>${project.clientReview.rating.toFixed(1)}</span>
-        </div>`;
-      }
-      html += `<p class="review-no-feedback">No feedback given</p>`;
-    } else {
-      html += `<div class="review-modal-rating">
+      <h4>Client feedback</h4>
+      <div class="review-modal-rating">
         <span class="review-stars review-stars-lg">${renderStars(project.clientReview.rating)}</span>
         <span>${project.clientReview.rating.toFixed(1)}</span>
         ${project.clientReview.date ? `<span class="review-modal-date">${project.clientReview.date}</span>` : ''}
       </div>
-      <blockquote>"${project.clientReview.text}"</blockquote>`;
-    }
-    html += `</section>`;
-  }
-
-  if (project.freelancerResponse) {
-    html += `<section class="review-modal-section">
-      <h4>Freelancer's response</h4>
-      <blockquote>"${project.freelancerResponse}"</blockquote>
+      <blockquote>"${project.clientReview.text}"</blockquote>
     </section>`;
-  }
-
-  if (project.endorsements?.length) {
-    html += `<section class="review-modal-section review-modal-endorsements">
-      <h4>Endorsed by client</h4>
-      <div class="review-modal-tags">${project.endorsements.map(t => `<span>${t}</span>`).join('')}</div>
-    </section>`;
-  }
-
-  if (project.freelancerReview?.text) {
-    html += `<section class="review-modal-section">
-      <h4>Freelancer's review to the client</h4>
-      <div class="review-modal-rating">
-        <span class="review-stars review-stars-lg">${renderStars(project.freelancerReview.rating)}</span>
-        <span>${project.freelancerReview.rating.toFixed(1)}</span>
-      </div>
-      <blockquote>"${project.freelancerReview.text}"</blockquote>
-    </section>`;
-  } else if (project.freelancerReview?.rating && !project.freelancerReview?.text) {
-    html += `<section class="review-modal-section">
-      <h4>Freelancer's review to the client</h4>
-      <div class="review-modal-rating">
-        <span class="review-stars review-stars-lg">${renderStars(project.freelancerReview.rating)}</span>
-        <span>${project.freelancerReview.rating.toFixed(1)}</span>
-      </div>
-    </section>`;
-  }
-
-  if (project.jobDescription || project.jobPrivate || project.jobDetails) {
-    html += `<section class="review-modal-section review-modal-job">
-      <h4>Job description</h4>`;
-    if (project.jobPrivate && !project.jobDescription) {
-      html += '<p class="review-job-private">This job is private</p>';
-    } else if (project.jobDescription) {
-      html += `<p>${project.jobDescription}</p>`;
-      if (project.budget) html += `<p class="review-job-detail"><strong>${project.jobType} job</strong> · Budget: ${project.budget}</p>`;
-      if (project.deliverBy) html += `<p class="review-job-detail">Deliver by — ${project.deliverBy}</p>`;
-    }
-    if (project.jobDetails?.length) {
-      html += `<ul class="review-job-details-list">${project.jobDetails.map(d => `<li>${d}</li>`).join('')}</ul>`;
-    }
-    html += `</section>`;
   }
 
   return html;
@@ -710,53 +606,29 @@ function initReviews() {
   const modal = document.getElementById('reviewModal');
   const modalTitle = document.getElementById('reviewModalTitle');
   const modalDates = document.getElementById('reviewModalDates');
-  const modalEarned = document.getElementById('reviewModalEarned');
   const modalBody = document.getElementById('reviewModalBody');
-  const tabCompleted = document.getElementById('tabCompleted');
-  const tabInProgress = document.getElementById('tabInProgress');
   if (!list || !modal) return;
 
-  const completed = PROJECTS.filter(p => p.status === 'completed');
-  const inProgress = PROJECTS.filter(p => p.status === 'in_progress');
+  const happyClients = PROJECTS.filter(p => p.clientReview?.text);
   const projectMap = Object.fromEntries(PROJECTS.map(p => [p.id, p]));
-  let activeTab = 'completed';
 
-  const countCompleted = document.getElementById('countCompleted');
-  const countInProgress = document.getElementById('countInProgress');
-  const summaryReviews = document.getElementById('summaryReviewCount');
-
-  if (countCompleted) countCompleted.textContent = completed.length;
-  if (countInProgress) countInProgress.textContent = inProgress.length;
-  if (summaryReviews) summaryReviews.textContent = completed.filter(p => p.clientReview?.text).length;
+  const summaryHappyClients = document.getElementById('summaryHappyClients');
+  if (summaryHappyClients) summaryHappyClients.textContent = happyClients.length;
 
   function renderList() {
-    const items = activeTab === 'completed' ? completed : inProgress;
-    if (items.length === 0) {
-      list.innerHTML = `<div class="reviews-empty">No ${activeTab === 'completed' ? 'completed' : 'in-progress'} projects to show yet.</div>`;
+    if (happyClients.length === 0) {
+      list.innerHTML = '<div class="reviews-empty">Client feedback will appear here soon.</div>';
       return;
     }
-    list.innerHTML = items.map(buildReviewListItem).join('');
+    list.innerHTML = happyClients.map(buildReviewListItem).join('');
     observeReveals(list);
   }
-
-  function setTab(tab) {
-    activeTab = tab;
-    tabCompleted?.classList.toggle('active', tab === 'completed');
-    tabInProgress?.classList.toggle('active', tab === 'in_progress');
-    tabCompleted?.setAttribute('aria-selected', tab === 'completed');
-    tabInProgress?.setAttribute('aria-selected', tab === 'in_progress');
-    renderList();
-  }
-
-  tabCompleted?.addEventListener('click', () => setTab('completed'));
-  tabInProgress?.addEventListener('click', () => setTab('in_progress'));
 
   function openReview(id) {
     const project = projectMap[id];
     if (!project) return;
     modalTitle.textContent = project.title;
     modalDates.textContent = `${project.dateStart} – ${project.dateEnd}`;
-    modalEarned.innerHTML = formatEarned(project);
     modalBody.innerHTML = buildModalContent(project);
     modal.hidden = false;
     document.body.classList.add('lightbox-open');
@@ -794,7 +666,7 @@ function initReviews() {
     });
   }
 
-  setTab('completed');
+  renderList();
 }
 
 document.addEventListener('DOMContentLoaded', initReviews);

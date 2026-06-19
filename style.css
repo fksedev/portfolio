@@ -854,50 +854,21 @@ strong { color: var(--text-heading); font-weight: 600; }
   font-size: 0.85rem;
   color: var(--text-muted);
 }
-/* Work history tabs */
-.work-history-tabs {
+/* Reviews list — client feedback */
+.reviews-list {
   display: flex;
+  flex-direction: column;
   gap: 0;
-  margin-bottom: 0;
-  border: 1px solid var(--border);
-  border-bottom: none;
-  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
-  overflow: hidden;
   background: var(--bg-card);
-}
-.work-tab {
-  flex: 1;
-  padding: 14px 20px;
-  border: none;
-  background: transparent;
-  color: var(--text-muted);
-  font-size: 0.9rem;
-  font-weight: 600;
-  font-family: inherit;
-  cursor: pointer;
-  border-bottom: 2px solid transparent;
-  transition: color var(--transition), background var(--transition), border-color var(--transition);
-}
-.work-tab:hover { color: var(--text-heading); background: rgba(255,255,255,0.02); }
-.work-tab.active {
-  color: var(--accent);
-  background: rgba(56, 189, 248, 0.06);
-  border-bottom-color: var(--accent);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
 }
 .reviews-empty {
   padding: 48px 28px;
   text-align: center;
   color: var(--text-muted);
   font-size: 0.95rem;
-  background: var(--bg-card);
-  border: 1px solid var(--border);
-  border-top: none;
-  border-radius: 0 0 var(--radius-lg) var(--radius-lg);
-}
-.review-item-preview-muted {
-  font-style: normal !important;
-  color: var(--text-muted) !important;
-  opacity: 0.8;
 }
 .review-status-badge {
   display: inline-flex;
@@ -917,23 +888,8 @@ strong { color: var(--text-heading); font-weight: 600; }
   font-size: 0.8rem;
   padding: 6px 14px;
 }
-.review-item-active {
-  border-left: 3px solid #22c55e;
-}
 .review-modal-status {
   padding-bottom: 0 !important;
-}
-
-/* Reviews list (Upwork-style) */
-.reviews-list {
-  display: flex;
-  flex-direction: column;
-  gap: 0;
-  background: var(--bg-card);
-  border: 1px solid var(--border);
-  border-radius: 0 0 var(--radius-lg) var(--radius-lg);
-  border-top: none;
-  overflow: hidden;
 }
 .review-item {
   display: block;
@@ -962,17 +918,37 @@ strong { color: var(--text-heading); font-weight: 600; }
 }
 .review-item-title {
   font-size: 1rem;
-  font-weight: 600;
+  font-weight: 700;
   color: var(--text-heading);
   line-height: 1.4;
-  flex: 1;
+  margin: 0 0 10px;
 }
 .review-item:hover .review-item-title { color: var(--accent); }
+.review-item-quote {
+  margin: 0 0 12px;
+  padding: 0;
+  border: none;
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: var(--text);
+  font-style: italic;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
 .review-item-rating {
   display: flex;
   align-items: center;
   gap: 6px;
   flex-shrink: 0;
+  margin-bottom: 8px;
+}
+.review-item-dates {
+  display: block;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  margin-bottom: 8px;
 }
 .review-stars {
   color: #fbbf24;

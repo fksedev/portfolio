@@ -4,8 +4,8 @@
     {
       "type": "chrome",
       "request": "launch",
-      "name": "Launch Portfolio (server + Chrome)",
-      "url": "http://localhost:8080",
+      "name": "Preview in Chrome (server + browser)",
+      "url": "http://127.0.0.1:8080",
       "webRoot": "${workspaceFolder}",
       "runtimeExecutable": "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
       "preLaunchTask": "Prepare portfolio debug"
@@ -13,18 +13,10 @@
     {
       "type": "chrome",
       "request": "launch",
-      "name": "Launch Chrome only (no server task)",
-      "url": "http://localhost:8080",
+      "name": "Chrome only (start server task first)",
+      "url": "http://127.0.0.1:8080",
       "webRoot": "${workspaceFolder}",
       "runtimeExecutable": "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
-    },
-    {
-      "type": "chrome",
-      "request": "attach",
-      "name": "Attach to Chrome (port 9222)",
-      "port": 9222,
-      "webRoot": "${workspaceFolder}",
-      "url": "http://localhost:8080"
     }
   ]
 }
